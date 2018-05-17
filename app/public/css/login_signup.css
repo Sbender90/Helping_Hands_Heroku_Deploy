@@ -1,0 +1,56 @@
+body,
+html {
+  height: 100%;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("./images/volunteers-2654004.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: 960px;
+}
+
+#login-container {
+  background-color: #81ecec;
+}
+
+#login-h1,
+h2,
+.modal-title {
+  font-family: "Dancing Script", cursive;
+  color: #2d3436;
+}
+
+#login-h1 {
+  font-size: 56px;
+  padding-top: 10px;
+}
+
+.btn-warning {
+  background-color: #ffeaa7;
+  border-color: #ffeaa7;
+  color: #2d3436;
+  margin-bottom: 20px;
+}
+
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active {
+  background-color: #fdcb6e;
+  color: #2d3436;
+  border-color: #fdcb6e;
+}
+
+.modal-content {
+  background-color: #fd79a8;
+}

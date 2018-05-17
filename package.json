@@ -1,0 +1,32 @@
+{
+  "name": "Helping-Hands",
+  "version": "1.0.0",
+  "description": "Team Project 2",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mysql2": "^1.5.3",
+    "nodemon": "^1.17.4",
+    "path": "^0.12.7",
+    "sequelize": "^4.37.7",
+    "sequelize-cli": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pckearney25/Helping-Hands.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pckearney25/Helping-Hands/issues"
+  },
+  "homepage": "https://github.com/pckearney25/Helping-Hands#readme"
+}

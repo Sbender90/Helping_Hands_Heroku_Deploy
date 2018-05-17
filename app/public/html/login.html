@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Helping Hands Login!</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link rel="stylesheet" href="../css/login_signup.css" type="text/css">
+    <title>Helping Hands!</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="bg-img">
+        <div class="container" id="login-container">
+
+            <div class="row" id="header-row">
+                <div class="col">
+                    <h1 id="login-h1">
+                        Helping Hands Login Page:
+                    </h1>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h2>Volunteer Login:</h2>
+                    <form id="vol-login-form">
+                        <div class="form-group">
+                            <label for="vol-email">Email address</label>
+                            <input type="email" class="form-control" id="vol-email" placeholder="Enter email">
+                            <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="vol-password">Password</label>
+                            <input type="password" class="form-control" id="vol-password" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-warning role-btn" id="vol-submit-btn" value="volunteer">
+                            <i class="fas fa-tasks"></i>
+                            <span>Submit</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="col">
+                    <h2>Organization Login:</h2>
+                    <form id="org-login-form">
+                        <div class="form-group">
+                            <label for="org-email">Email address</label>
+                            <input type="email" class="form-control" id="org-email" placeholder="Enter email">
+                            <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="org-password">Password</label>
+                            <input type="password" class="form-control" id="org-password" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-warning role-btn" id="org-submit-btn" value="organization">
+                            <i class="fas fa-tasks"></i>
+                            <span>Submit</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODAL HTML-->
+
+    <div class="modal" id="result-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Be a Helping Hand!</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="result-message"></p>
+                </div>
+                <div class="modal-footer ">
+                    <button type="button " class="btn btn-warning" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Custom Script -->
+    <script src="../js/login.js" type="text/javascript"></script>
+</body>
+
+</html>

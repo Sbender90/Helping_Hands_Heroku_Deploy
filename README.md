@@ -1,1 +1,2 @@
-# Helping_Hands_Heroku_Deploy
+# Helping-Hands
+Team Project 2
