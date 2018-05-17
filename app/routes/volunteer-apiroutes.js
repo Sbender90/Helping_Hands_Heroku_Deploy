@@ -30,7 +30,7 @@ module.exports = function(app) {
 
   app.get("/api/posts/", function(req, res) {
     // console.log("POST GET: ", res)
-    db.Events.findAll({
+    db.events.findAll({
      
     })
       .then(function(dbEvents) {
@@ -40,7 +40,7 @@ module.exports = function(app) {
   });
   //the where is hardcoded need to change that to be dynamic for the user that is currently loged 
   app.get("/api/volevnts", function(req, res) {
-    db.Volunteer_Events.findAll({
+    db.volunteer_events.findAll({
       attributes: ["event_id"],
       where: {
         vol_id: 2
