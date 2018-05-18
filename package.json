@@ -1,5 +1,5 @@
 {
-  "name": "Helping-Hands",
+  "name": "helping-hands",
   "version": "1.0.0",
   "description": "Team Project 2",
   "main": "server.js",
@@ -23,8 +23,8 @@
     "url": "git+https://github.com/pckearney25/Helping-Hands.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Patrick Kearney Steven Bender Crystal Hughes",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/pckearney25/Helping-Hands/issues"
   },
