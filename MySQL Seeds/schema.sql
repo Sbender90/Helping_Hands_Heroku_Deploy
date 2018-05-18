@@ -2,7 +2,7 @@
 -- DROP TABLE volunteers;
 CREATE TABLE Volunteers
 (
-  id INT NOT NULL
+  vol_id INT NOT NULL
   AUTO_INCREMENT,
   first_name VARCHAR
   (45) NOT NULL,
@@ -15,14 +15,13 @@ CREATE TABLE Volunteers
   createdAt DATETIME NOT NULL,
   updatedAt DATETIME NOT NULL,
   PRIMARY KEY
-  (id)
+  (vol_id)
 );
-
--- DROP TABLE Organizations;
--- DROP TABLE organizations;
+  -- DROP TABLE Organizations;
+  -- DROP TABLE organizations;
   CREATE TABLE Organizations
   (
-    id INT NOT NULL
+    org_id INT NOT NULL
     AUTO_INCREMENT,
   organizer VARCHAR
     (255) NOT NULL,
@@ -33,14 +32,13 @@ CREATE TABLE Volunteers
   createdAt DATETIME NOT NULL,
   updatedAt DATETIME NOT NULL,
   PRIMARY KEY
-    (id)
+    (org_id)
 );
-
--- DROP TABLE Events;
--- DROP TABLE events;
+    -- DROP TABLE Events;
+    -- DROP TABLE events;
     CREATE TABLE Events
     (
-      id INT NOT NULL
+      event_id INT NOT NULL
       AUTO_INCREMENT,
   event_name VARCHAR
       (255) NOT NULL,
@@ -53,11 +51,10 @@ CREATE TABLE Volunteers
   createdAt DATETIME NOT NULL,
   updatedAt DATETIME NOT NULL,
   PRIMARY KEY
-      (id)
+      (event_id)
 );
-
--- DROP TABLE Volunteer_Events;
--- DROP TABLE volunteer_events;
+      -- DROP TABLE Volunteer_Events;
+      -- DROP TABLE volunteer_events;
       CREATE TABLE Volunteer_Events
       (
         id INT NOT NULL
@@ -69,9 +66,8 @@ CREATE TABLE Volunteers
   PRIMARY KEY
         (id)
 );
-
--- DROP TABLE Users;
--- DROP TABLE users;
+        -- DROP TABLE Users;
+        -- DROP TABLE users;
         CREATE TABLE Users
         (
           id INT NOT NULL

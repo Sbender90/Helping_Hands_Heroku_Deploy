@@ -28,19 +28,19 @@ Values
     ("nhs@dist.edu", "NHS@#$dist", "organization", '2018-05-15 00:00:00', '2018-05-15 00:00:00'),
     ("bchelpers@help.org", "blu3Cr0$$001", "organization", '2018-05-15 00:00:00', '2018-05-15 00:00:00');
 INSERT INTO events
-    (event_name, event_desc, event_loc, event_date, event_time, createdAt, updatedAt)
+    (event_name, event_desc, event_loc, event_date, event_time, createdAt, updatedAt, OrganizationOrgId)
 VALUES
     ("Gardening", "Need help picking weeds out of our community garden.  Please
-understand it will be hot outside and to bring sunscreen.  Thank you for your help", "South Babtist Church", "2018-05-31", "12:00", '2018-05-15 00:00:00', '2018-05-15 00:00:00');
+understand it will be hot outside and to bring sunscreen.  Thank you for your help", "South Babtist Church", "2018-05-31", "12:00", '2018-05-15 00:00:00', '2018-05-15 00:00:00', 1);
 INSERT INTO events
-    (event_name, event_desc, event_loc, event_date, event_time, createdAt, updatedAt)
+    (event_name, event_desc, event_loc, event_date, event_time, createdAt, updatedAt, OrganizationOrgId)
 VALUES
     ("Car Wash", "Need some volunteers for our fundraiser car wash.  Please
-understand it will be hot outside and to bring sunscreen.  Thank you for your help", "North High School", "2018-05-27", "12:00", '2018-05-15 00:00:00', '2018-05-15 00:00:00');
+understand it will be hot outside and to bring sunscreen.  Thank you for your help", "North High School", "2018-05-27", "12:00", '2018-05-15 00:00:00', '2018-05-15 00:00:00', 3);
 INSERT INTO events
-    (event_name, event_desc, event_loc, event_date, event_time, createdAt, updatedAt)
+    (event_name, event_desc, event_loc, event_date, event_time, createdAt, updatedAt, OrganizationOrgId)
 VALUES
-    ("Filing", "We are remodeling and would love some volunteers to help us organize and file!  Thank you for your help!", "Blue Cross", "2018-05-17", "12:00", '2018-05-15 00:00:00', '2018-05-15 00:00:00');
+    ("Filing", "We are remodeling and would love some volunteers to help us organize and file!  Thank you for your help!", "Blue Cross", "2018-05-17", "12:00", '2018-05-15 00:00:00', '2018-05-15 00:00:00', 4);
 INSERT INTO volunteer_events
     (vol_id, event_id, createdAt, updatedAt)
 VALUES
