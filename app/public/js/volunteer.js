@@ -8,7 +8,7 @@ $(document).ready(function () {
     })
     .then(function (response) {
       var results = response;
-      // console.log("Got the data: ", results);
+      console.log("Got the data: ", results);
       for (var i = 0; i < results.length; i++) {
         var event_name = $("<p>").text(results[i].event_name);
         event_name.addClass("mb-1");
@@ -24,7 +24,10 @@ $(document).ready(function () {
         event_time.addClass("dateTime");
         var submit_btn = $("<button>").text("Mark as going");
         submit_btn.addClass("btn btn-submit");
+        submit_btn.addClass("btn-event");
+        submit_btn.attr("value", results[i].event_id);
         $('submit_btn').attr('id', 'going-btn');
+       
         
 
         $("#events_div").append(event_name);

@@ -1,20 +1,25 @@
 $(document).ready(function() {
-$("#going-btn").on("click", function(event) {
-  console.log('submit button: ', event);
-  event.preventDefault();
+var vol_id = 3;
+
+  $(".btn-event").on("click", function(event) {
+    event.preventDefault();
+
+    var query = {};
+
+    query.vol_id = vol_id;
+    console.log("vol_id", query.vol_id);
+    query.event_id = $(this).val();
+    console.log("event_id", query.event_id);
+
+console.log("query:", query);
 
 
 
-$.ajax({
-    url: "/api/going",
-    method: "POST"
+
+
   })
-  .then(function (response) {
-    var results = response;
-    console.log("button test: ", result);
-  });
 
-});
+
 
 
 });

@@ -24,9 +24,10 @@ module.exports = function(app) {
   //   console.log('inside get /volunteer');
   // });
 
-// get all events associated witht he vol_id in the volunteer_events table
+// get all events associated with the vol_id in the volunteer_events table
 // to show the user
-//
+//;
+var vol_id = 3;
 
   app.get("/api/posts/", function(req, res) {
     // console.log("POST GET: ", res)
@@ -35,7 +36,7 @@ module.exports = function(app) {
     })
       .then(function(dbEvents) {
         res.json(dbEvents);
-        // console.log("Got the data: ", dbEvents);
+        console.log("Got the data: ", dbEvents);
       });
   });
   //the where is hardcoded need to change that to be dynamic for the user that is currently loged 
@@ -75,12 +76,12 @@ module.exports = function(app) {
   //   });
   // });
 
-  // app.post("/api/going", function(req, res) {
-  //   console.log("I'm going: ", req.body);
-  //   Volunteer_Events.create({
-  //     vol_id: req.body.id
-  //   });
-  // });
+  app.post("/api/going", function(req, res) {
+    console.log("I'm going: ", req.body);
+    Volunteer_Events.create({
+      vol_id: req.body.id
+    });
+  });
 
 // app.get("/api/:user"), function(req, res) {
 //   console.log("User Id", req.id);
