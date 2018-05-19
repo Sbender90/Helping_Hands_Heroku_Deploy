@@ -39,48 +39,82 @@ module.exports = function(app) {
       });
   });
   //the where is hardcoded need to change that to be dynamic for the user that is currently loged 
+
   app.get("/api/volevnts", function(req, res) {
     db.Volunteer_Events.findAll({
+      raw: true,
       attributes: ["event_id"],
       where: {
-        vol_id: 2
+        [Op.or]: [{ id: 2 }, { id: 1 }]
       }
     }).then(function(dbVolEve) {
-      console.log(dbVolEve);
-      db.Events.findAll({
-        where: {
-          [Op.or]: [{ id: 3 }, { id: 1 }]
-        }
+      console.log("inside /api/volevnts: ", dbVolEve);
+    });
+  });
+
+  // app.get("/api/volevnts", function(req, res) {
+  //   console.log("inside /api/volevnts");
+  //   db.Volunteer_Events.findAll({
+  //     attributes: ["event_id"],
+  //     where: {
+  //       vol_id: 1
+  //     }
+  //   }).then(function(dbVolEve) {
+  //     // console.log(dbVolEve);
+  //     db.Events.findAll({
+  //       where: {
+  //         [Op.or]: [{ id: 2 }, { id: 1 }]
+  //       }
         
 
-      }).then(function(dbEvents) {
-        // console.log("op.or: ", dbVolEve);
-        // console.log(dbEvents);
-        res.json(dbEvents);
-      });
-    });
-  });
+  //     }).then(function(dbEvents) {
+  //       // console.log("op.or: ", dbVolEve);
+  //       // console.log(dbEvents);
+  //       res.json(dbEvents);
+  //     });
+  //   });
+  // });
 
-  app.post("/api/going", function(req, res) {
-    console.log("I'm going: ", req.body);
-    Volunteer_Events.create({
-      vol_id: req.body.dbCurrentUser
-    });
-  });
+//   app.post("/api/going", function(req, res) {
+//     console.log("I'm going: ", req.body);
+//     Volunteer_Events.create({
+//       vol_id: req.body.dbCurrentUser
+//     });
+//   });
 
-app.get("/api/:user"), function(req, res) {
-  console.log("User Id", req.id);
-  db.Users.findOne({
-      where: {
-        email: req.body.email,
-        hh_role: req.body.hh_role
+// app.get("/api/:user"), function(req, res) {
+//   console.log("User Id", req.id);
+//   db.Users.findOne({
+//       where: {
+//         email: req.body.email,
+//         hh_role: req.body.hh_role
+//     }
+//   }).then(function(dbCurrentUser) {
+//     res.json(dbCurrentUser);
+//     console.log("Current User: ", dbCurrentUser);
+
+//   })
+// }
+
+app.get("api/events/:id", function(req, res) {
+console.log("Inisde api/events/:id");
+  db.Volunteer_Events.findAll({
+    raw: true,
+    attributes: ['event_id'],
+    where: {
+      vol_id: req.params.id
     }
-  }).then(function(dbCurrentUser) {
-    res.json(dbCurrentUser);
-    console.log("Current User: ", dbCurrentUser);
-
-  })
-}
-
+  }).then(function(dbVolEve) {
+    console.log(dbVolEve);
+    db.Events.findAll({
+      where: {
+        [Op.or]: dbVolEve
+      }
+    }).then(function(dbEvents) {
+      console.log(dbEvents);
+      res.json(dbEvents);
+    });
+  });
+});
 
 };
