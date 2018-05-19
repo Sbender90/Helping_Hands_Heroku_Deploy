@@ -24,6 +24,8 @@ $(document).ready(function () {
         event_time.addClass("dateTime");
         var submit_btn = $("<button>").text("Mark as going");
         submit_btn.addClass("btn btn-submit");
+        $('submit_btn').attr('id', 'going-btn');
+        
 
         $("#events_div").append(event_name);
         $("#events_div").append(event_desc);
@@ -57,6 +59,8 @@ $(document).ready(function () {
         event_time.addClass("dateTime");
         var un_submit_btn = $("<button>").text("Mark as not going");
         un_submit_btn.addClass("btn btn-submit");
+        $('un_submit_btn').attr('id', 'not-going-btn');
+        
         
 
         $("#user_att_div").append(event_name);
@@ -66,7 +70,8 @@ $(document).ready(function () {
         $("#user_att_div").append(un_submit_btn);
         
       }
-    })
+    });
+
 
 
 
