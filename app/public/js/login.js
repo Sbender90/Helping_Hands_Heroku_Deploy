@@ -1,10 +1,10 @@
 $(document).ready(function() {
   // The app stores a user's infromation returned from the login process.
   // Clear it at the start of each login attempt.
-  sessionStorage.clear();
 
   $(".role-btn").on("click", function(event) {
     event.preventDefault();
+
     //The object that will be used to retrieve the users information.
     var newLogin = {
       email: "",
@@ -45,20 +45,23 @@ $(document).ready(function() {
       if (data) {
         console.log(data);
 
-        // Store the data in sessionStorage.
+        // Store the data in localStorage.
         // This section can be revised once the final app is working.
         // An object is returned from the search.
         // For now we'll just store the entire thing.
         // Absurdly we have to turn it back into JSON.
 
-        sessionStorage.setItem("hhUserData", JSON.stringify(data));
+        localStorage.setItem("hhUserData", JSON.stringify(data));
+
+        var hhOrgData = JSON.parse(localStorage.hhUserData);
+        console.log(hhOrgData);
 
         //Display a successful login Message for the user.
         //Needs some work
-        $("#result-message").text(
-          "You've succussfully logged in. Now go out there and make a difference!"
-        );
-        $("#result-modal").modal("show");
+        //$("#result-message").text(
+        //"You've succussfully logged in. Now go out there and make a difference!"
+        //);
+        //$("#result-modal").modal("show");
 
         //Redirect to the appropriate volunteer or organization page.
         if (newLogin.hh_role === "volunteer") {

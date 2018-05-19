@@ -52,7 +52,7 @@ $(".role-btn").on("click", function(event) {
 
   $.post("/api/signup", newUser, function(data) {
     if (data) {
-      alert("Now Registered: " + JSON.stringify(data));
+      window.location.href = "/login";
     }
   });
 });
