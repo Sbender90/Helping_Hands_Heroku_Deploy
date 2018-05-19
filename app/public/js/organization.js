@@ -1,18 +1,82 @@
 $(document).ready(function() {
+  //all buttons except for login in disabled until login.
   if (sessionStorage.hhOrgData) {
     var hhOrgData = JSON.parse(sessionStorage.hhOrgData);
     console.log(hhOrgData);
     //Display the organization name.
     $("#org-name-header").html("Organization: " + hhOrgData.organizer);
 
-    //Get the organizations events.
+    //Get the events for a given organizationbased on the org_id stored in
+    //sessionStorage. Uses JOINED tables.
     $.get("/api/org_events/" + hhOrgData.org_id, function(data) {
       if (data) {
         console.log(data);
         displayEvents(data);
       }
     });
+
+    //Triggers the creation of a new event and refreshs the page.
+    $("#new-event-btn").on("click", function(event) {
+      event.preventDefault();
+      //assemble an object defining an event
+      var newEvent = {};
+      console.log(newEvent);
+
+      newEvent.event_name = $("#event-name")
+        .val()
+        .trim();
+      newEvent.event_desc = $("#event-description")
+        .val()
+        .trim();
+      newEvent.event_loc = $("#event-location")
+        .val()
+        .trim();
+      newEvent.event_date = $("#event-date")
+        .val()
+        .trim();
+      newEvent.event_time = $("#event-time")
+        .val()
+        .trim();
+      newEvent.OrganizationOrgId = hhOrgData.org_id;
+
+      document.getElementById("event-form").reset();
+
+      //send a new post to the database.
+      $.post("/api/new_event", newEvent, function(data) {
+        if (data) {
+          console.log(data);
+        }
+      });
+
+      location.reload();
+    });
+
+    //Triggers the display of volunteers signed up for an event.
+    $("#event-volunteers-btn").on("click", function(event) {
+      event.preventDefault();
+      $("#vol-tbody").empty();
+      $("#vol-thead").empty();
+
+      console.log("get my volunteers!");
+
+      var event_id = $("#event-id-val")
+        .val()
+        .trim();
+
+      //Function to return the get the volunteer id numbers for an event via
+      //the THROUGH TABLE, then obtain their information from the Volunteers table.
+      if (event_id) {
+        $.get("/api/event_volunteers/" + event_id, function(data) {
+          if (data) {
+            console.log(data);
+            console.log(data.length);
+            displayVolunteers(data);
+          }
+        });
+      }
+    });
   }
+
   //Triggers the login process
   $("#org-login-btn").on("click", function(event) {
     event.preventDefault();
@@ -45,67 +109,7 @@ $(document).ready(function() {
     });
   });
 
-  //Triggers the creation of a new event and refreshs the page.
-  $("#new-event-btn").on("click", function(event) {
-    event.preventDefault();
-    //assemble an object defining an event
-    var newEvent = {};
-    console.log(newEvent);
-
-    newEvent.event_name = $("#event-name")
-      .val()
-      .trim();
-    newEvent.event_desc = $("#event-description")
-      .val()
-      .trim();
-    newEvent.event_loc = $("#event-location")
-      .val()
-      .trim();
-    newEvent.event_date = $("#event-date")
-      .val()
-      .trim();
-    newEvent.event_time = $("#event-time")
-      .val()
-      .trim();
-    newEvent.OrganizationOrgId = hhOrgData.org_id;
-
-    document.getElementById("event-form").reset();
-
-    //send a new post to the database.
-    $.post("/api/new_event", newEvent, function(data) {
-      if (data) {
-        console.log(data);
-      }
-    });
-
-    location.reload();
-  });
-
-  //Triggers the display of volunteers signed up for an event.
-  $("#event-volunteers-btn").on("click", function(event) {
-    event.preventDefault();
-    $("#vol-tbody").empty();
-    $("#vol-thead").empty();
-
-    console.log("get my volunteers!");
-
-    var event_id = $("#event-id-val")
-      .val()
-      .trim();
-
-    //Function to return the get the volunteer id numbers for an event via
-    //the through table, then obtain their information from the Volunteers table.
-    if (event_id) {
-      $.get("/api/event_volunteers/" + event_id, function(data) {
-        if (data) {
-          console.log(data);
-          console.log(data.length);
-          displayVolunteers(data);
-        }
-      });
-    }
-  });
-
+  //generates the table of voliunteers for a specific event_id
   function displayVolunteers(array) {
     //empty out the current table
     $("#vol-thead").empty();
@@ -145,7 +149,7 @@ $(document).ready(function() {
       tBody.append(tRow);
     }
   }
-
+  //Displays all events for a given org_id.
   function displayEvents(array) {
     //empty out the current table
     $("#event-thead").empty();
