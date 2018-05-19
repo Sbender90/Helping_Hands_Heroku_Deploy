@@ -75,12 +75,12 @@ module.exports = function(app) {
   //   });
   // });
 
-//   app.post("/api/going", function(req, res) {
-//     console.log("I'm going: ", req.body);
-//     Volunteer_Events.create({
-//       vol_id: req.body.dbCurrentUser
-//     });
-//   });
+  // app.post("/api/going", function(req, res) {
+  //   console.log("I'm going: ", req.body);
+  //   Volunteer_Events.create({
+  //     vol_id: req.body.id
+  //   });
+  // });
 
 // app.get("/api/:user"), function(req, res) {
 //   console.log("User Id", req.id);
