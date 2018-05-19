@@ -17,6 +17,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/html/welcome.html"));
   });
 
+  //THIS WILL BE REMOVED ONCE LOGIN IS INCORPORATED INTO THE VOLUNTEER PAGE DIRECTLY
   // login route loads the login.html page, where users can login.
   app.get("/login", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/html/login.html"));
