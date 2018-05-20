@@ -3,7 +3,8 @@ html {
   height: 100%;
 }
 
-.parallax {
+.parallax { 
+
   /* The image used */
   background-image: url("./images/volunteers-2654004.jpg");
 
