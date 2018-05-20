@@ -3,17 +3,24 @@ html {
   height: 100%;
 }
 
-.bg-img {
+.parallax {
   /* The image used */
   background-image: url("./images/volunteers-2654004.jpg");
 
-  /* Full height */
-  height: 100%;
+  /* Set a specific height */
+  height: 25000px;
 
-  /* Center and scale the image nicely */
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+h1 {
+  font-family: "Dancing Script", cursive;
+  color: #2d3436;
+  font-size: 48px;
+  padding-top: 10px;
 }
 
 .container {
@@ -34,4 +41,7 @@ html {
   background-color: #fdcb6e;
   color: #2d3436;
   border-color: #fdcb6e;
+}
+#event-vol-span {
+  margin-right: 10px;
 }

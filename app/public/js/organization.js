@@ -52,6 +52,8 @@ $(document).ready(function() {
     });
 
     //Triggers the display of volunteers signed up for an event.
+    //This is NOT PERFECT. A user can actually access all events not just theirs.
+    //Will need to reference the data to return only their specific info.
     $("#event-volunteers-btn").on("click", function(event) {
       event.preventDefault();
       $("#vol-tbody").empty();
@@ -109,7 +111,7 @@ $(document).ready(function() {
     });
   });
 
-  //generates the table of voliunteers for a specific event_id
+  //generates the table of volunteers for a specific event_id
   function displayVolunteers(array) {
     //empty out the current table
     $("#vol-thead").empty();

@@ -10,17 +10,14 @@ $(document).ready(function() {
   // Variable to hold our events
   var events;
 
-
-
   // This function does an API call to delete events
   function deleteEvents(id) {
     $.ajax({
       method: "DELETE",
       url: "/api/events/" + id
-    })
-      .then(function() {
-        getEvents(eventCategorySelect.val());
-      });
+    }).then(function() {
+      getEvents(eventCategorySelect.val());
+    });
   }
 
   // InitializeRows handles appending all of our constructed events HTML inside eventContainer
@@ -54,8 +51,7 @@ $(document).ready(function() {
     newEventOrganization.css({
       float: "right",
       color: "blue",
-      "margin-top":
-      "-10px"
+      "margin-top": "-10px"
     });
     var newEventCardBody = $("<div>");
     newEventCardBody.addClass("card-body");
@@ -103,9 +99,13 @@ $(document).ready(function() {
     eventContainer.empty();
     var messageH2 = $("<h2>");
     messageH2.css({ "text-align": "center", "margin-top": "50px" });
-    messageH2.html("No events yet" + partial + ", navigate <a href='/cms" + query +
-    "'>here</a> ");
+    messageH2.html(
+      "No events yet" +
+        partial +
+        ", navigate <a href='/cms" +
+        query +
+        "'>here</a> "
+    );
     eventContainer.append(messageH2);
   }
-
 });

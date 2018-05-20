@@ -1,6 +1,7 @@
--- DROP TABLE Volunteers;
--- DROP TABLE volunteers;
-CREATE TABLE Volunteers
+DROP DATABASE IF EXISTS helping_handsDB;
+CREATE DATABASE helping_handsDB;
+USE helping_handsDB;
+CREATE TABLE volunteers
 (
   vol_id INT NOT NULL
   AUTO_INCREMENT,
@@ -17,9 +18,7 @@ CREATE TABLE Volunteers
   PRIMARY KEY
   (vol_id)
 );
-  -- DROP TABLE Organizations;
-  -- DROP TABLE organizations;
-  CREATE TABLE Organizations
+  CREATE TABLE organizations
   (
     org_id INT NOT NULL
     AUTO_INCREMENT,
@@ -34,9 +33,7 @@ CREATE TABLE Volunteers
   PRIMARY KEY
     (org_id)
 );
-    -- DROP TABLE Events;
-    -- DROP TABLE events;
-    CREATE TABLE Events
+    CREATE TABLE events
     (
       event_id INT NOT NULL
       AUTO_INCREMENT,
@@ -50,12 +47,11 @@ CREATE TABLE Volunteers
   event_time TIME NOT NULL,
   createdAt DATETIME NOT NULL,
   updatedAt DATETIME NOT NULL,
+  OrganizationOrgId INTEGER NOT NULL,
   PRIMARY KEY
       (event_id)
 );
-      -- DROP TABLE Volunteer_Events;
-      -- DROP TABLE volunteer_events;
-      CREATE TABLE Volunteer_Events
+      CREATE TABLE volunteer_events
       (
         id INT NOT NULL
         AUTO_INCREMENT,
@@ -66,9 +62,7 @@ CREATE TABLE Volunteers
   PRIMARY KEY
         (id)
 );
-        -- DROP TABLE Users;
-        -- DROP TABLE users;
-        CREATE TABLE Users
+        CREATE TABLE users
         (
           id INT NOT NULL
           AUTO_INCREMENT,
