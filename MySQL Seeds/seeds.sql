@@ -34,37 +34,29 @@ INSERT INTO `Volunteers`
 INSERT INTO `Events` 
 (`event_id`,`event_name`,`event_desc`,`event_loc`,`event_date`,`event_time`,`createdAt`,`updatedAt`,`OrganizationOrgId`) VALUES
 (1,'Gardening','Need help picking weeds out of our community garden.  Please\nunderstand it will be hot outside and to bring sunscreen.  Thank you for your help','South Babtist Church','2018-05-31','12:00:00','2018-05-15 00:00:00','2018-05-15 00:00:00',1);
-INSERT INTO `Events` (`
-event_id`,`event_name
-`,`event_desc`,`event_loc`,`event_date`,`event_time`,`createdAt`,`updatedAt`,`OrganizationOrgId`) VALUES
+INSERT INTO `Events` 
+(`event_id`,`event_name`,`event_desc`,`event_loc`,`event_date`,`event_time`,`createdAt`,`updatedAt`,`OrganizationOrgId`) VALUES
 (2,'Car Wash','Need some volunteers for our fundraiser car wash.  Please\nunderstand it will be hot outside and to bring sunscreen.  Thank you for your help','North High School','2018-05-27','12:00:00','2018-05-15 00:00:00','2018-05-15 00:00:00',3);
-INSERT INTO `Events` (`
-event_id`,`event_name
-`,`event_desc`,`event_loc`,`event_date`,`event_time`,`createdAt`,`updatedAt`,`OrganizationOrgId`) VALUES
+INSERT INTO `Events` 
+(`event_id`,`event_name`,`event_desc`,`event_loc`,`event_date`,`event_time`,`createdAt`,`updatedAt`,`OrganizationOrgId`) VALUES
 (3,'Filing','We are remodeling and would love some volunteers to help us organize and file!  Thank you for your help!','Blue Cross','2018-05-17','12:00:00','2018-05-15 00:00:00','2018-05-15 00:00:00',4);
-INSERT INTO `Events` (`
-event_id`,`event_name
-`,`event_desc`,`event_loc`,`event_date`,`event_time`,`createdAt`,`updatedAt`,`OrganizationOrgId`) VALUES
+INSERT INTO `Events` 
+(`event_id`,`event_name`,`event_desc`,`event_loc`,`event_date`,`event_time`,`createdAt`,`updatedAt`,`OrganizationOrgId`) VALUES
 (4,'Church Picnic','Eat Your Heart Out!','South Church Fair Grounds','2018-05-31','12:00:00','2018-05-19 04:23:13','2018-05-19 04:23:13',3);
-INSERT INTO `Events` (`
-event_id`,`event_name
-`,`event_desc`,`event_loc`,`event_date`,`event_time`,`createdAt`,`updatedAt`,`OrganizationOrgId`) VALUES
+INSERT INTO `Events` 
+(`event_id`,`event_name`,`event_desc`,`event_loc`,`event_date`,`event_time`,`createdAt`,`updatedAt`,`OrganizationOrgId`) VALUES
 (5,'Notrh High School 10k Fun Run','Volunteers needed to man the water tables, first-aid station, and the provide security.','Crissy Field','2018-06-04','09:00:00','2018-05-19 04:32:05','2018-05-19 04:32:05',3);
-INSERT INTO `Events` (`
-event_id`,`event_name
-`,`event_desc`,`event_loc`,`event_date`,`event_time`,`createdAt`,`updatedAt`,`OrganizationOrgId`) VALUES
+INSERT INTO `Events` 
+(`event_id`,`event_name`,`event_desc`,`event_loc`,`event_date`,`event_time`,`createdAt`,`updatedAt`,`OrganizationOrgId`) VALUES
 (6,'Senior Secret Santa','Volunteers needed to provide transportation to local seniors for our annual choir performance and gift exchange.','North High School','2018-12-20','15:00:00','2018-05-19 04:34:15','2018-05-19 04:34:15',3);
-INSERT INTO `Events` (`
-event_id`,`event_name
-`,`event_desc`,`event_loc`,`event_date`,`event_time`,`createdAt`,`updatedAt`,`OrganizationOrgId`) VALUES
+INSERT INTO `Events` 
+(`event_id`,`event_name`,`event_desc`,`event_loc`,`event_date`,`event_time`,`createdAt`,`updatedAt`,`OrganizationOrgId`) VALUES
 (7,'Laskeshore Clean Up','Clean up the park.','West Lake Park','2108-06-05','12:00:00','2018-05-19 11:20:43','2018-05-19 11:20:43',3);
-INSERT INTO `Events` (`
-event_id`,`event_name
-`,`event_desc`,`event_loc`,`event_date`,`event_time`,`createdAt`,`updatedAt`,`OrganizationOrgId`) VALUES
+INSERT INTO `Events` 
+(`event_id`,`event_name`,`event_desc`,`event_loc`,`event_date`,`event_time`,`createdAt`,`updatedAt`,`OrganizationOrgId`) VALUES
 (8,'Seniors Summer Picnic','Volunteers needed to talk with seniors, set-up, food service and cleanup.','Golden Palms Senior Center','2018-06-04','12:00:00','2018-05-19 17:08:58','2018-05-19 17:08:58',3);
-INSERT INTO `Events` (`
-event_id`,`event_name
-`,`event_desc`,`event_loc`,`event_date`,`event_time`,`createdAt`,`updatedAt`,`OrganizationOrgId`) VALUES
+INSERT INTO `Events` 
+(`event_id`,`event_name`,`event_desc`,`event_loc`,`event_date`,`event_time`,`createdAt`,`updatedAt`,`OrganizationOrgId`) VALUES
 (9,'Seniors Bingo','Helping Seniors','St Mary\'s Rectory','2018-05-30','12:00:00','2018-05-19 18:56:40','2018-05-19 18:56:40',5);
 
 INSERT INTO `Organizations` (`org_id`,`organizer`,`email`,`phone_num`,`createdAt`,`updatedAt`) VALUES (1,'South Baptist Church','sbc@church.org','816-326-7643','2018-05-15 00:00:00','2018-05-15 00:00:00');
