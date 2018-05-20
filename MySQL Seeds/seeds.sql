@@ -1,50 +1,38 @@
-INSERT INTO `Volunteers` (`
-vol_id`,`first_name
-`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
-(1,'Tom','Franklin','913-555-2345','tfranklin@hey.com','2018-05-15 00:00:00','2018-05-15 00:00:00');
-INSERT INTO `Volunteers` (`
-vol_id`,`first_name
-`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
+INSERT INTO `Volunteers` 
+(`vol_id`,`first_name`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
+(12,'Tom','Franklin','913-555-2345','tfranklin@hey.com','2018-05-15 00:00:00','2018-05-15 00:00:00');
+INSERT INTO `Volunteers` 
+(`vol_id`,`first_name`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
 (2,'Kalie','Smith','816-555-5432','ksmith@hey.com','2018-05-15 00:00:00','2018-05-15 00:00:00');
-INSERT INTO `Volunteers` (`
-vol_id`,`first_name
-`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
+INSERT INTO `Volunteers` 
+(`vol_id`,`first_name`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
 (3,'Pat','Simms','913-555-2233','psimms@hey.com','2018-05-15 00:00:00','2018-05-15 00:00:00');
-INSERT INTO `Volunteers` (`
-vol_id`,`first_name
-`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
+INSERT INTO `Volunteers` 
+(`vol_id`,`first_name`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
 (4,'James','White','816-555-9876','jwhite@hey.com','2018-05-15 00:00:00','2018-05-15 00:00:00');
-INSERT INTO `Volunteers` (`
-vol_id`,`first_name
-`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
+INSERT INTO `Volunteers` 
+(`vol_id`,`first_name`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
 (5,'Sam','Resende','913-555-7643','sresende@hey.com','2018-05-15 00:00:00','2018-05-15 00:00:00');
-INSERT INTO `Volunteers` (`
-vol_id`,`first_name
-`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
+INSERT INTO `Volunteers` 
+(`vol_id`,`first_name`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
 (6,'Sonia','Johnson','913-555-1198','sjohnson@hey.com','2018-05-15 00:00:00','2018-05-15 00:00:00');
-INSERT INTO `Volunteers` (`
-vol_id`,`first_name
-`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
+INSERT INTO `Volunteers` 
+(`vol_id`,`first_name`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
 (7,'Patrick','Kearney','555-888-7777','patrick@progamminghack.com','2018-05-18 20:36:05','2018-05-18 20:36:05');
-INSERT INTO `Volunteers` (`
-vol_id`,`first_name
-`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
+INSERT INTO `Volunteers` 
+(`vol_id`,`first_name`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
 (8,'James','Edwards','888-777-9999','jimmy@bigrig.com','2018-05-18 21:00:39','2018-05-18 21:00:39');
-INSERT INTO `Volunteers` (`
-vol_id`,`first_name
-`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
+INSERT INTO `Volunteers` 
+(`vol_id`,`first_name`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
 (9,'Patrick','Edwards','888-777-9999','pedwards@coding.com','2018-05-18 21:13:47','2018-05-18 21:13:47');
-INSERT INTO `Volunteers` (`
-vol_id`,`first_name
-`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
+INSERT INTO `Volunteers` 
+(`vol_id`,`first_name`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
 (10,'George','Glass','333-444-5555','gglass@imaginary.com','2018-05-18 21:27:00','2018-05-18 21:27:00');
-INSERT INTO `Volunteers` (`
-vol_id`,`first_name
-`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
+INSERT INTO `Volunteers` 
+(`vol_id`,`first_name`,`last_name`,`phone_num`,`email`,`createdAt`,`updatedAt`) VALUES
 (11,'Jim','Jones','444-555-7777','jimjones@koolaid.com','2018-05-18 21:32:14','2018-05-18 21:32:14');
-INSERT INTO `Events` (`
-event_id`,`event_name
-`,`event_desc`,`event_loc`,`event_date`,`event_time`,`createdAt`,`updatedAt`,`OrganizationOrgId`) VALUES
+INSERT INTO `Events` 
+(`event_id`,`event_name`,`event_desc`,`event_loc`,`event_date`,`event_time`,`createdAt`,`updatedAt`,`OrganizationOrgId`) VALUES
 (1,'Gardening','Need help picking weeds out of our community garden.  Please\nunderstand it will be hot outside and to bring sunscreen.  Thank you for your help','South Babtist Church','2018-05-31','12:00:00','2018-05-15 00:00:00','2018-05-15 00:00:00',1);
 INSERT INTO `Events` (`
 event_id`,`event_name
